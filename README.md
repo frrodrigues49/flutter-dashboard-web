@@ -1,16 +1,10 @@
-# flutter_dashboard_web
+# Flutter dashboard responsive
 
-A new Flutter project.
+## Desktop
+<img src="https://github.com/user-attachments/assets/f02be339-23c5-43de-b49e-afcf23b0ecb6"  width="70%"/>
 
-## Getting Started
+## Tablet
+<img src="https://github.com/user-attachments/assets/4f2fdb91-7ed0-4a6d-838c-6dd29b315572"  width="50%"/>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Mobile
+<img src="https://github.com/user-attachments/assets/a43dc0e1-1a87-4595-a3f8-5740949da5a2"  width="20%"/>
