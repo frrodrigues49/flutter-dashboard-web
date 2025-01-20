@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard_web/constants.dart';
+import 'package:flutter_dashboard_web/responsive.dart';
 import 'package:flutter_dashboard_web/screens/main/components/dashboard/components/header.dart';
 import 'package:flutter_dashboard_web/screens/main/components/dashboard/components/my_fiels.dart';
 import 'package:flutter_dashboard_web/screens/main/components/dashboard/components/recent_files.dart';
@@ -10,13 +11,13 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: SingleChildScrollView(
-        padding: EdgeInsets.all(defaultPadding),
+        padding: const EdgeInsets.all(defaultPadding),
         child: Column(
           children: [
-            Header(),
-            SizedBox(height: defaultPadding),
+            const Header(),
+            const SizedBox(height: defaultPadding),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -24,17 +25,23 @@ class DashboardScreen extends StatelessWidget {
                   flex: 5,
                   child: Column(
                     children: [
-                      MyFiels(),
-                      SizedBox(height: defaultPadding),
-                      RecentFiles()
+                      const MyFiels(),
+                      const SizedBox(height: defaultPadding),
+                      const RecentFiles(),
+                      if (Responsive.isMobile(context))
+                        const SizedBox(height: defaultPadding),
+                      if (Responsive.isMobile(context))
+                        const StorageDetails(),
                     ],
                   ),
                 ),
-                SizedBox(width: defaultPadding),
-                Expanded(
-                  flex: 2,
-                  child: StorageDetails(),
-                ),
+                if (!Responsive.isMobile(context))
+                  const SizedBox(width: defaultPadding),
+                if (!Responsive.isMobile(context))
+                  const Expanded(
+                    flex: 2,
+                    child: StorageDetails(),
+                  ),
               ],
             )
           ],
